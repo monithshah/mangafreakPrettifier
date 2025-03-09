@@ -1,12 +1,12 @@
 {
 
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Mangafreak Prettfier",
   "version": "1.0",
   "description": "Removes ads and prettifies Mangafreak",
   "content_scripts": [
     {
-      "matches": ["*://*.mangafreak.net/*"],
+      "matches": ["*://*.mangafreak.me/*"],
       "js": ["prettify_mangafreak.js"],
       "run_at": "document_start"
     }

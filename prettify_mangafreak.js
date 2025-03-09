@@ -58,7 +58,7 @@ window.addEventListener('load', (e) => {
     const htmlElement = document.documentElement.cloneNode(true);
     document.documentElement.remove();
     document.appendChild(htmlElement);
-    const slideShowQuery = '.slideshow-container>a';
+    const slideShowQuery = '.slideshow-container';
     const slideshowContainer = document.querySelector(slideShowQuery);
     const newSlideShowContainer = appendAndHideOriginalElement(slideshowContainer, slideshowContainer.parentNode);
     document.querySelector('.god_box').style.width = '100vw';
@@ -66,6 +66,9 @@ window.addEventListener('load', (e) => {
     document.querySelector('.bottomsup').style.maxWidth = '100vw';
     document.querySelector('.slideshow-container').style.maxWidth = '100vw';
     newSlideShowContainer.querySelectorAll('.mySlides').forEach(e => e.style.display = 'block');
+
+    newSlideShowContainer.querySelectorAll('div.image_orientation').forEach(e => e.style.maxWidth = '100vw')
+    newSlideShowContainer.querySelectorAll('img').forEach(e => e.style.width = '100vw')
   };
 
   setTimeout(prettifyPage, 100);
