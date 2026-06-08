@@ -9,7 +9,20 @@
       "matches": ["*://*.mangafreak.me/*"],
       "js": ["prettify_mangafreak.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": ["*://tcbonepiecechapters.com/*"],
+      "js": ["prettify_tcb.js"],
+      "run_at": "document_start"
     }
-  ]
-
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "Addons@MangaFreakPrettifier",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": []
 }
